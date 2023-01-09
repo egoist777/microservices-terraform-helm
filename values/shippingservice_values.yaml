@@ -1,0 +1,18 @@
+appName: shippingservice
+appNamespace: "${namespace}"
+replicaCount: 1
+imageName: gcr.io/google-samples/microservices-demo/shippingservice
+imageVersion: v0.5.0
+containerVariables:
+ - name: PORT
+   value: "50051"
+    
+serviceName: shippingservice
+servicePort: 50051
+serviceTargetPort: 50051
+serviceType: ClusterIP
+
+cpuRequest: 256m
+memoryRequest: 400Mi
+cpuLimit: 512m
+memoryLimit: 600Mi

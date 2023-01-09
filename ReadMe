@@ -1,0 +1,2 @@
+1.terraform apply -target=kubernetes_namespace.terraform
+2.terraform apply

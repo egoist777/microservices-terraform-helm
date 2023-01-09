@@ -1,0 +1,18 @@
+appName: currencyservice
+appNamespace: "${namespace}"
+replicaCount: 1
+imageName: gcr.io/google-samples/microservices-demo/currencyservice
+imageVersion: v0.3.1
+containerVariables:
+ - name: PORT
+   value: "7000"
+    
+serviceName: currencyservice
+servicePort: 7000
+serviceTargetPort: 7000
+serviceType: ClusterIP
+
+cpuRequest: 256m
+memoryRequest: 400Mi
+cpuLimit: 512m
+memoryLimit: 600Mi

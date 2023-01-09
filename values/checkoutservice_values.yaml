@@ -1,0 +1,30 @@
+appName: checkoutservice
+appNamespace: "${namespace}"
+replicaCount: 1
+imageName: gcr.io/google-samples/microservices-demo/checkoutservice
+imageVersion: v0.5.0
+containerVariables:
+ - name: PORT
+   value: "7070"
+ - name: SHIPPING_SERVICE_ADDR
+   value: "shippingservice:50051"
+ - name: PRODUCT_CATALOG_SERVICE_ADDR
+   value: "productcatalogservice:3550"
+ - name: CART_SERVICE_ADDR
+   value: "cartservice:7070"
+ - name: CURRENCY_SERVICE_ADDR
+   value: "currencyservice:7000"
+ - name: EMAIL_SERVICE_ADDR
+   value: "emailservice:8080"
+ - name: PAYMENT_SERVICE_ADDR
+   value: "paymentservice:50051"
+    
+serviceName: checkoutservice
+servicePort: 5050
+serviceTargetPort: 5050
+serviceType: ClusterIP
+
+cpuRequest: 256m
+memoryRequest: 400Mi
+cpuLimit: 512m
+memoryLimit: 600Mi

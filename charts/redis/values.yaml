@@ -1,0 +1,17 @@
+appName: redis
+replicaCount: 1
+imageName: redis
+imageVersion: alpine
+    
+serviceName: redis-svc
+servicePort: 6379
+serviceTargetPort: 6379
+serviceType: ClusterIP
+
+cpuRequest: 100m
+memoryRequest: 200Mi
+cpuLimit: 150m
+memoryLimit: 300Mi 
+
+mountPath: /data
+volumeName: redis-data

@@ -1,0 +1,20 @@
+appName: recommendationservice
+appNamespace: "${namespace}"
+replicaCount: 1
+imageName: gcr.io/google-samples/microservices-demo/recommendationservice
+imageVersion: v0.5.0
+containerVariables:
+ - name: PORT
+   value: "8080"
+ - name: PRODUCT_CATALOG_SERVICE_ADDR
+   value: "productcatalogservice:3550"
+    
+serviceName: recommendationservice
+servicePort: 8080
+serviceTargetPort: 8080
+serviceType: ClusterIP
+
+cpuRequest: 256m
+memoryRequest: 400Mi
+cpuLimit: 512m
+memoryLimit: 600Mi
